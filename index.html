@@ -84,7 +84,7 @@
     text-decoration:none; font-size:14.5px; font-weight:500;
     color:var(--muted); letter-spacing:0.01em;
     transition:color .15s ease, background .15s ease;
-    padding:9px 16px; border-radius:100px;
+    padding:9px 16px; border-radius:0;
   }
   nav.links a:hover, nav.links a:focus-visible{color:var(--text); background:var(--bg-elev-2);}
   nav.links a.current{color:var(--text); background:var(--bg-elev-2);}
@@ -103,14 +103,14 @@
       transition:transform .25s ease; overflow-y:auto;
     }
     nav.links.open{transform:translateX(0);}
-    nav.links a{padding:16px 18px; width:100%; border-radius:14px;}
+    nav.links a{padding:16px 18px; width:100%; border-radius:0;}
     .nav-toggle{
       display:block; background:none; border:none; cursor:pointer;
       width:32px; height:22px; position:relative;
     }
     .nav-toggle span{
       position:absolute; left:0; width:100%; height:2px; background:var(--text);
-      border-radius:2px;
+      border-radius:0;
       transition:transform .2s ease, opacity .2s ease;
     }
     .nav-toggle span:nth-child(1){top:0;}
@@ -135,9 +135,9 @@
     font-size:13.5px; font-weight:600; letter-spacing:0.02em;
     color:var(--text);
     background:var(--bg-elev-2); border:1px solid var(--line);
-    padding:8px 18px; border-radius:100px; margin-bottom:28px;
+    padding:8px 18px; border-radius:0; margin-bottom:28px;
   }
-  .pill-tag .dot{width:7px; height:7px; border-radius:50%; background:var(--orange);}
+  .pill-tag .dot{width:7px; height:7px; border-radius:0; background:var(--orange);}
 
   .hero h1{
     position:relative; z-index:1;
@@ -156,7 +156,7 @@
   .hero-actions{position:relative; z-index:1; margin-top:38px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
   .btn{
     display:inline-flex; align-items:center; gap:8px;
-    padding:15px 28px; border-radius:100px; font-size:15.5px; font-weight:700;
+    padding:15px 28px; border-radius:0; font-size:15.5px; font-weight:700;
     text-decoration:none; border:1px solid transparent; cursor:pointer;
     font-family:'Plus Jakarta Sans', sans-serif;
     transition:transform .15s ease, background .15s ease;
@@ -172,7 +172,7 @@
     position:relative; z-index:1;
     max-width:640px; margin:64px auto 0;
     aspect-ratio:16/9;
-    border-radius:28px;
+    border-radius:0;
     background:linear-gradient(155deg, var(--bg-elev), var(--bg-elev-2));
     border:1px solid var(--line);
     overflow:hidden;
@@ -197,7 +197,7 @@
   .rig-caption{
     position:absolute; left:20px; bottom:16px; z-index:2;
     font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--text);
-    background:rgba(250,249,245,0.75); padding:5px 10px; border-radius:100px;
+    background:rgba(250,249,245,0.75); padding:5px 10px; border-radius:0;
   }
 
   /* ---------- SECTION SHELL ---------- */
@@ -207,7 +207,7 @@
   .section-head .tag{
     font-size:13.5px; font-weight:700; letter-spacing:0.02em;
     color:var(--orange); margin-bottom:16px; display:inline-block;
-    background:rgba(255,106,61,0.12); padding:6px 14px; border-radius:100px;
+    background:rgba(255,106,61,0.12); padding:6px 14px; border-radius:0;
   }
   .section-head h2{font-size:clamp(28px,3.6vw,44px); line-height:1.1;}
   .section-head p{margin-top:18px; color:var(--muted); font-size:17px;}
@@ -220,13 +220,13 @@
   }
   @media (max-width:760px){.for-grid{grid-template-columns:1fr;}}
   .for-card{
-    background:var(--bg-elev-2); border:1px solid var(--line); border-radius:22px;
+    background:var(--bg-elev-2); border:1px solid var(--line); border-radius:0;
     padding:32px 28px; transition:transform .2s ease, border-color .2s ease;
   }
   .for-card:hover{transform:translateY(-4px); border-color:rgba(255,255,255,0.25);}
   .for-card .num{
     display:inline-flex; align-items:center; justify-content:center;
-    width:34px; height:34px; border-radius:50%; font-size:13px; font-weight:700;
+    width:34px; height:34px; border-radius:0; font-size:13px; font-weight:700;
     font-family:'Space Grotesk',sans-serif;
   }
   .for-card:nth-child(1) .num{background:rgba(91,124,250,0.18); color:var(--blue);}
@@ -235,32 +235,34 @@
   .for-card h3{font-size:19px; margin-top:16px;}
   .for-card p{color:var(--muted); font-size:15px; margin-top:10px;}
 
-  /* ---------- visual language / swatch gallery ---------- */
+  /* ---------- selected work / real project photography ---------- */
   .swatch-scroller{
     position:relative; z-index:1;
     display:flex; gap:18px; overflow-x:auto; padding-bottom:12px;
     scroll-snap-type:x mandatory;
   }
   .swatch-scroller::-webkit-scrollbar{height:6px;}
-  .swatch-scroller::-webkit-scrollbar-thumb{background:var(--line); border-radius:100px;}
+  .swatch-scroller::-webkit-scrollbar-thumb{background:var(--line); border-radius:0;}
   .swatch{
-    flex:0 0 220px; scroll-snap-align:start;
+    flex:0 0 260px; scroll-snap-align:start;
     aspect-ratio:1/1; position:relative; overflow:hidden;
-    border-radius:24px; border:1px solid var(--line);
+    border-radius:0; border:1px solid var(--line);
+    background:var(--bg-elev-2);
   }
-  .swatch svg{width:100%; height:100%;}
+  .swatch img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(0.1);}
   .swatch .label{
-    position:absolute; left:14px; bottom:14px;
-    font-size:12.5px; font-weight:600; letter-spacing:0.01em; color:var(--text);
-    background:rgba(11,11,16,0.55); padding:5px 12px; border-radius:100px;
-    backdrop-filter:blur(4px);
+    position:absolute; left:0; right:0; bottom:0;
+    font-size:12.5px; font-weight:600; letter-spacing:0.01em; color:#f6f5f2;
+    background:linear-gradient(0deg, rgba(11,11,16,0.82), transparent);
+    padding:26px 14px 12px;
   }
 
   /* ---------- services ---------- */
-  .services{position:relative; z-index:1; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-  @media (max-width:900px){.services{grid-template-columns:1fr;}}
+  .services{position:relative; z-index:1; display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  @media (max-width:1000px){.services{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:640px){.services{grid-template-columns:1fr;}}
   .svc-card{
-    background:var(--bg-elev-2); border:1px solid var(--line); border-radius:24px;
+    background:var(--bg-elev-2); border:1px solid var(--line); border-radius:0;
     overflow:hidden; display:flex; flex-direction:column;
     transition:transform .2s ease;
   }
@@ -278,7 +280,7 @@
   .process-rail{position:relative; z-index:1;}
   .process-item{
     display:grid; grid-template-columns:80px 1fr 130px; gap:24px; align-items:center;
-    background:var(--bg-elev-2); border:1px solid var(--line); border-radius:24px;
+    background:var(--bg-elev-2); border:1px solid var(--line); border-radius:0;
     padding:26px 28px; margin-bottom:16px;
     transition:transform .2s ease;
   }
@@ -286,7 +288,7 @@
   @media (max-width:760px){.process-item{grid-template-columns:60px 1fr; }
     .process-item .process-icon{display:none;}}
   .process-item .node{
-    width:56px; height:56px; border-radius:50%;
+    width:56px; height:56px; border-radius:0;
     display:flex; align-items:center; justify-content:center;
     font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:19px;
   }
@@ -300,14 +302,14 @@
     font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--muted);
     text-transform:uppercase; letter-spacing:0.04em; margin-top:10px; display:block;
   }
-  .process-icon{width:100%; aspect-ratio:1/1; border-radius:16px; background:var(--bg); border:1px solid var(--line); overflow:hidden;}
+  .process-icon{width:100%; aspect-ratio:1/1; border-radius:0; background:var(--bg); border:1px solid var(--line); overflow:hidden;}
   .process-icon svg{width:100%; height:100%;}
 
   /* ---------- capabilities / spec sheet ---------- */
   .spec-sheet{
     position:relative; z-index:1; overflow:hidden;
     background:linear-gradient(155deg, #1d1d23, #0f0f13);
-    border-radius:32px;
+    border-radius:0;
     padding:52px 46px;
     color:#f6f5f2;
   }
@@ -328,7 +330,7 @@
     padding:12px 0; border-bottom:1px solid rgba(246,245,242,0.12);
     font-size:15px; display:flex; align-items:center; gap:12px;
   }
-  .swab{width:14px; height:14px; flex-shrink:0; border-radius:50%;}
+  .swab{width:14px; height:14px; flex-shrink:0; border-radius:0;}
   .spec-col li .txt{flex:1; font-weight:500; color:#f6f5f2;}
   .spec-col li span.v{color:#a7a4ac; font-family:'IBM Plex Mono', monospace; font-size:12.5px;}
 
@@ -336,10 +338,10 @@
   .team-grid{position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; gap:20px;}
   @media (max-width:760px){.team-grid{grid-template-columns:1fr;}}
   .team-card{
-    background:var(--bg-elev-2); border:1px solid var(--line); border-radius:24px;
+    background:var(--bg-elev-2); border:1px solid var(--line); border-radius:0;
     display:flex; gap:22px; align-items:flex-start; padding:30px;
   }
-  .avatar{width:64px; height:64px; flex-shrink:0; border-radius:50%; overflow:hidden;}
+  .avatar{width:64px; height:64px; flex-shrink:0; border-radius:0; overflow:hidden;}
   .avatar svg{width:100%; height:100%;}
   .team-card h3{font-size:18px;}
   .team-card .role{
@@ -470,35 +472,32 @@
 <section>
   <div class="wrap">
     <div class="section-head center">
-      <span class="tag">Visual language</span>
-      <h2>Every project moves through the same textures — sketch, surface, section, print.</h2>
+      <span class="tag">Selected work</span>
+      <h2>Real geometry, real projects — this is the kind of surfacing we bring to yours.</h2>
     </div>
     <div class="swatch-scroller">
-      <div class="swatch" style="background:#151519;">
-        <svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#151519"/><g stroke="#5b7cfa" stroke-width="1" opacity="0.6"><line x1="0" y1="10" x2="100" y2="10"/><line x1="0" y1="25" x2="100" y2="25"/><line x1="0" y1="40" x2="100" y2="40"/><line x1="0" y1="55" x2="100" y2="55"/><line x1="0" y1="70" x2="100" y2="70"/><line x1="0" y1="85" x2="100" y2="85"/></g><path d="M15 85 Q30 20 50 45 Q70 70 85 15" stroke="#ff6a3d" stroke-width="3" fill="none"/></svg>
-        <span class="label">FDM layers</span>
+      <div class="swatch">
+        <img src="https://www.onceh-cad.site/assets/images/extract-5-816x459.jpeg" alt="Cisco Phone 9800 Series surfacing model" loading="lazy">
+        <span class="label">Cisco Phone 9800 — surfacing</span>
       </div>
-      <div class="swatch" style="background:#1d1d23;">
-        <svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#1d1d23"/><path d="M20 70 C 30 20, 70 20, 80 70" stroke="#f6f5f2" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M28 72 C 36 34, 64 34, 72 72" stroke="#f6f5f2" stroke-width="1" fill="none" opacity="0.35"/><path d="M36 74 C 42 48, 58 48, 64 74" stroke="#9b6bff" stroke-width="2" fill="none"/></svg>
-        <span class="label">Resin surface</span>
+      <div class="swatch">
+        <img src="https://www.onceh-cad.site/assets/images/van-lc-environ-r1-2-816x459.jpeg" alt="Automotive surfacing study" loading="lazy">
+        <span class="label">Automotive — surfacing study</span>
       </div>
-      <div class="swatch" style="background:linear-gradient(155deg,#5b7cfa,#3a53c4);">
-        <svg viewBox="0 0 100 100"><g stroke="#f6f5f2" stroke-width="0.75" opacity="0.4"><path d="M0 12 L100 12 M0 30 L100 30 M0 48 L100 48 M0 66 L100 66 M0 84 L100 84"/><path d="M12 0 L12 100 M30 0 L30 100 M48 0 L48 100 M66 0 L66 100 M84 0 L84 100"/></g><rect x="30" y="30" width="40" height="40" fill="none" stroke="#ff6a3d" stroke-width="2.5" rx="6"/></svg>
-        <span class="label">CAD grid</span>
+      <div class="swatch">
+        <img src="https://www.onceh-cad.site/assets/images/7up-816x459.png" alt="Cisco Headset 300 Series parametric model" loading="lazy">
+        <span class="label">Cisco Headset 300 — parametric</span>
       </div>
-      <div class="swatch" style="background:#151519;">
-        <svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#151519"/><g stroke="#f6f5f2" stroke-width="1" fill="none" opacity="0.85"><path d="M50 10 L86 30 L86 70 L50 90 L14 70 L14 30 Z"/><path d="M50 10 L50 50 M14 30 L50 50 M86 30 L50 50"/></g><circle cx="50" cy="50" r="5" fill="#2fd6b4"/></svg>
-        <span class="label">Isometric build</span>
+      <div class="swatch">
+        <img src="https://www.onceh-cad.site/assets/images/sw-model-1256x869.png" alt="SolidWorks model in progress" loading="lazy">
+        <span class="label">SolidWorks — model detail</span>
       </div>
-      <div class="swatch" style="background:linear-gradient(155deg,#ff6a3d,#b8461c);">
-        <svg viewBox="0 0 100 100"><g stroke="#f6f5f2" stroke-width="1.5"><line x1="10" y1="50" x2="90" y2="50"/><line x1="20" y1="42" x2="20" y2="58"/><line x1="80" y1="42" x2="80" y2="58"/></g><text x="33" y="35" font-family="IBM Plex Mono, monospace" font-size="9" fill="#f6f5f2">40.0mm</text></svg>
-        <span class="label">Dimension callout</span>
-      </div>
-      <div class="swatch" style="background:#1d1d23;">
-        <svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#1d1d23"/><g stroke="#ff6a3d" stroke-width="1" opacity="0.9"><line x1="10" y1="10" x2="90" y2="90"/><line x1="10" y1="30" x2="70" y2="90"/><line x1="10" y1="50" x2="50" y2="90"/><line x1="10" y1="70" x2="30" y2="90"/><line x1="30" y1="10" x2="90" y2="70"/><line x1="50" y1="10" x2="90" y2="50"/><line x1="70" y1="10" x2="90" y2="30"/></g></svg>
-        <span class="label">Nylon lattice</span>
+      <div class="swatch">
+        <img src="https://www.onceh-cad.site/assets/images/sw-ui-5-1256x683.png" alt="SolidWorks interface workflow" loading="lazy">
+        <span class="label">SolidWorks — workflow</span>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -506,9 +505,18 @@
   <div class="wrap">
     <div class="section-head">
       <span class="tag">What we do</span>
-      <h2>Three services, one continuous thread from concept to production-ready.</h2>
+      <h2>Four services, one continuous thread from concept to production-ready.</h2>
     </div>
     <div class="services">
+      <div class="svc-card">
+        <div class="svc-visual">
+          <img src="https://www.onceh-cad.site/assets/images/sw-model-1256x869.png" alt="SolidWorks CAD model" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="svc-body">
+          <h3>CAD development</h3>
+          <p>Solid and surface modelling in SolidWorks and Rhino, from quick subD investigations to production-fidelity geometry — parametric where it needs to be, freeform where it doesn't.</p>
+        </div>
+      </div>
       <div class="svc-card">
         <div class="svc-visual tint-blue">
           <svg viewBox="0 0 200 140" preserveAspectRatio="xMidYMid slice">
@@ -522,19 +530,19 @@
           </svg>
         </div>
         <div class="svc-body">
-          <h3>CAD development</h3>
-          <p>Solid and surface modelling in SolidWorks and Rhino, from quick subD investigations to production-fidelity geometry — parametric where it needs to be, freeform where it doesn't.</p>
+          <h3>Precision surfacing</h3>
+          <p>Complex, high-volume-ready surfacing work — the kind that goes into a shipped Cisco phone or headset — brought to your product's form.</p>
         </div>
       </div>
       <div class="svc-card">
         <div class="svc-visual tint-orange">
           <svg viewBox="0 0 200 140" preserveAspectRatio="xMidYMid slice">
             <g fill="#f6f5f2">
-              <rect x="60" y="90" width="80" height="10" rx="5" opacity="0.95"/>
-              <rect x="66" y="76" width="68" height="10" rx="5" opacity="0.8"/>
-              <rect x="72" y="62" width="56" height="10" rx="5" opacity="0.65"/>
-              <rect x="78" y="48" width="44" height="10" rx="5" opacity="0.5"/>
-              <rect x="84" y="34" width="32" height="10" rx="5" opacity="0.4"/>
+              <rect x="60" y="90" width="80" height="10" opacity="0.95"/>
+              <rect x="66" y="76" width="68" height="10" opacity="0.8"/>
+              <rect x="72" y="62" width="56" height="10" opacity="0.65"/>
+              <rect x="78" y="48" width="44" height="10" opacity="0.5"/>
+              <rect x="84" y="34" width="32" height="10" opacity="0.4"/>
             </g>
             <line x1="60" y1="112" x2="140" y2="112" stroke="#f6f5f2" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
@@ -662,7 +670,7 @@
     <div class="team-grid">
       <div class="team-card">
         <div class="avatar">
-          <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#5b7cfa"/><text x="32" y="42" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#f6f5f2">L</text></svg>
+          <img src="https://www.onceh-cad.site/assets/images/mbr-1-1920x1280.jpeg" alt="Ladislao, industrial designer" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div>
           <h3>Ladislao</h3>
